@@ -10,15 +10,17 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: darkslategray;
+    font-family: 'Nunito', sans-serif;
 }
 
 .container {
-    background: cornsilk;
+    background: mediumpurple;
     width: 450px;
     height: 450px;
     border-radius: 25px;
     padding: 25px;
     position: relative;
+    color: white;
 }
 
 .search-box {
@@ -49,13 +51,13 @@ body {
     font-size: 22px;
     color: #fff;
     font-weight: 500;
-    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
     padding: 0 50px 0 60px;
 }
 
 .search-box input::placeholder {
     color: #fff;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .search-box button {
@@ -70,4 +72,26 @@ body {
     color:#fff;
     padding: 0 40px 0 50px;
     cursor: pointer;
+}
+
+.weather-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.weather-box img{
+    width: 60%;
+}
+
+.weather-box .temperature {
+    position: relative;
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.weather-box .temperature sup {
+  font-size: 0.5em;
+  vertical-align: super;
+  margin-left: 2px;
 }
