@@ -19,6 +19,7 @@ search.addEventListener('click', ()=>{
         const humidity = document.querySelector('.weather-details .humidity span');
         const wind = document.querySelector('.weather-details .wind span');
 
+        // for image
         switch(json.weather[0].main){
             case 'Clear':
                 console.log(json.weather[0])
@@ -89,6 +90,11 @@ search.addEventListener('click', ()=>{
                 console.log(json.weather[0])
                 image.src = 'images/Cloudy.png';
         }
+
+        temperature.innerHTML = `${parseInt(json.main.temp)}<sup>&deg;c</sup>`;
+        description.innerHTML = `${json.weather[0].description}`;
+        humidity.innerHTML = `${json.main.humidity}%`;
+        wind.innerHTML = `${parseInt(json.wind.speed)} km/h`;
 
     });
 });
